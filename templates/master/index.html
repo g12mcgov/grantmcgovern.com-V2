@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+{% load static %}
+{% include "header.html" %}
+
+	<div class="top" id="top-frame">
+		<div id="particles">
+			<h1 class="name typist"></h1>
+			<div id="terminal"></div>
+		</div>
+	</div>
+	<div class="middle">
+		<h1>Hi, I'm Grant.</h1>
+		<h2>Builder of <a href="http://github.com/g12mcgov"><b>things</b></a>, daily hacker.</h2>
+		<div class="bio">
+			<div class="panel panel-default">
+  				<div class="panel-body">
+					<p style="text-align: center;"><b>{ I am obsessed with how things work. }</b><p>
+					<hr>
+
+					<p>I'm currently a junior at <a href="http://www.wfu.edu/">Wake Forest University</a> pursuing a B.S. in <a href="http://college.wfu.edu/cs/">Computer Science</a> with a minor in <a href="https://entrepreneurship.wfu.edu/">Entrepreneurship</a>.
+						<br><br>
+
+						I enjoy spicy foods, my favorite season is Winter, and I have an affinity for anything with <a href="http://www.saabcentral.com/forums/garage.php?do=viewvehicle&vehicle_id=1340">wheels</a>. I am from Washington, D.C., but my favorite city is Stockholm, Sweden.
+						<br><br>
+
+						I have had the privilege of being taught by great mentors along my path of becoming a software developer. I have met incredible people through <a href="https://www.linkedin.com/in/grantmcgovern">internships</a>, and learned amazing things.
+						<br><br>
+
+						My first love is Python, but at school I tend to write strictly in C++. I sometimes find myself writing HTML, CSS, and JavaScript, but I prefer a backend approach. I have worked with Scala, Erlang, and Prolog, though not in depth. I have written RESTful API's in Node.js and Java and I've worked on high traffic web applications in both PHP and Rails, though I still consider myself a Ruby novice.
+						<br><br>
+
+						I am a Mac OS X evangelist and really anything Unix of the sort. I believe in utterly simply designs and sheer minimalism. When I'm not bossing computers around, you can find me reposting new house-music tunes on <a href="https://soundcloud.com/grant-mcgovern">SoundCloud</a>, building <a href="https://www.dropbox.com/sh/74mqtulsy2l2x92/AAAoDQKHnqC0R7MAA21vTKw9a?dl=0">things</a> out of wood, or <a href="http://whereisgrant.herokuapp.com/">here</a>.
+						<br><br>
+
+						In my spare time, I hack code for <a href="http://1834wfu.com/">1834 Software</a>, Wake Forest University's student run software development firm.
+					</p>
+  				</div>
+			</div>
+		</div>
+	</div>
+	<div class="projects">
+		<h1>My Projects</h1>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div id="weatherfetch" class="image-holder">
+						<div class="front">
+							<img class="img-responsive" src="{% static 'img/WeatherFetch.png' %}">
+							<!-- <div class="image-holder" style='background-image: url("{% static 'img/WeatherFetch.png' %}");'></div> -->
+						</div>
+						<div class="back">
+							<span><a class="transparent-button btn btn-default" href="http://weatherfetch.com/">WeatherFetch.com</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div id="win" class="image-holder">
+						<div class="front">
+							<img class="img-responsive" src="{% static 'img/WIN.png' %}">
+						</div>
+						<div class="back">
+							<span><a class="transparent-button btn btn-default" href="https://github.com/g12mcgov/WIN">WIN</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div id="gympeak" class="image-holder">
+						<div class="front">
+							<img class="img-responsive" src="{% static 'img/GymPeak.png' %}">
+						</div>
+						<div class="back">
+							<span style="top: 5%;">
+							<a class="transparent-button btn btn-default" href="http://gympeak.com/">GymPeak</a>
+							</span>
+							<br>
+							<br>
+							<span style="font-size: 0.75em; top: 0%; text-align: left;">
+							Built the entire backend and sensor system for the GymPeak iOS application, an app where users can see real time occupancy of the Wake Forest, UNC, and Davidson College gyms.
+							<span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div id="barbeque" class="image-holder">
+						<div class="front">
+							<img class="img-responsive" src="{% static 'img/barbeque.png' %}">
+						</div>
+						<div class="back">
+							<span><a class="transparent-button btn btn-default" href="https://github.com/g12mcgov/Barbeque">Check it out on Github</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div id="macon-command-center" class="image-holder">
+						<div class="front">
+							<img class="img-responsive" src="{% static 'img/MaconCommandCenter.png' %}">
+						</div>
+						<div class="back">
+							<span><a class="transparent-button btn btn-default" href="http://macon.pw">Check it out here</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div id="groupme-cli" class="image-holder">
+						<div class="front">
+							<img class="img-responsive" src="{% static 'img/GroupMeCli.png' %}">
+						</div>
+						<div class="back">
+							<span><a class="transparent-button btn btn-default" href="https://github.com/g12mcgov/GroupMeCli">Check it out on Github</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div id="where-is-grant" class="image-holder">
+						<div class="front">
+							<img class="img-responsive" src="{% static 'img/WhereIsGrant.png' %}">
+						</div>
+						<div class="back">
+							<span><a class="transparent-button btn btn-default" href="http://whereisgrant.herokuapp.com/">Check it out here</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div id="campus-connect" class="image-holder">
+						<div class="front">
+							<img class="img-responsive" src="{% static 'img/CampusConnect.png' %}">
+						</div>
+						<div class="back">
+							<span><a class="transparent-button btn btn-default" href="http://thecampusconnect.herokuapp.com/">Check it out here</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div id="studybug" class="image-holder">
+						<div class="front">
+							<img class="img-responsive" src="{% static 'img/StudyBug.png' %}">
+						</div>
+						<div class="back">
+							<span><a class="transparent-button btn btn-default" href="http://www.wfustudybug.com/studybug/">Check it out here</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div id="soundbar" class="image-holder">
+						<div class="front">
+							<img class="img-responsive" src="{% static 'img/SoundBar.png' %}">
+						</div>
+						<div class="back">
+							<span>SoundBar</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div id="terminal-js" class="image-holder">
+						<div class="front">
+							<img class="img-responsive" src="{% static 'img/Terminal.gif' %}">
+						</div>
+						<div class="back">
+							<span>Terminal.js</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div id="grantmcgovern" class="image-holder">
+						<div class="front">
+							<img class="img-responsive" src="{% static 'img/grantmcgovern.png' %}">
+						</div>
+						<div class="back">
+							<span>GrantMcGovern.com</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div id="devcharts" class="image-holder">
+						<div class="front">
+							<img class="img-responsive" src="{% static 'img/DevCharts.png' %}">
+						</div>
+						<div class="back">
+							<span>DevCharts</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div id="pong" class="image-holder">
+						<div class="front">
+							<img class="img-responsive" src="{% static 'img/Pong.png' %}">
+						</div>
+						<div class="back">
+							<span>Pong</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div id="soundbar" class="image-holder">
+						<div class="front">
+							<img class="img-responsive" src="{% static 'img/SoundBar.png' %}">
+						</div>
+						<div class="back">
+							<span>SoundBar</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div id="roots" class="image-holder">
+						<div class="front">
+							<img class="img-responsive" src="{% static 'img/Roots.png' %}">
+						</div>
+						<div class="back">
+							<span>Exploring the Fast Fourier Transformation</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div id="gitcards" class="image-holder">
+						<div class="front">
+							<img class="img-responsive" src="{% static 'img/GitCards.png' %}">
+						</div>
+						<div class="back">
+							<span>GitCards.js</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div id="soundbar" class="image-holder">
+						<div class="front">
+							<img class="img-responsive" src="{% static 'img/SoundBar.png' %}">
+						</div>
+						<div class="back">
+							<span>SoundBar</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% include "footer.html" %}
+
+
+
