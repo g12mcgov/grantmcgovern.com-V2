@@ -1,1 +1,1 @@
-web: gunicorn grantmcgovern/wsgi:application
+web: gunicorn --log-file=- grantmcgovern.wsgi:application
