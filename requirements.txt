@@ -5,7 +5,7 @@ anyjson==0.3.3
 billiard==3.3.0.20
 cffi==1.1.2
 cryptography==0.9.1
-dill==0.2.4.dev0
+-e git+https://github.com/uqfoundation/dill.git@27d9dcf69108125f9532e20db9d685d37484c6f1#egg=dill-master
 dj-database-url==0.3.0
 dj-static==0.0.6
 django-toolbelt==0.0.1
@@ -17,7 +17,7 @@ ipaddress==1.0.7
 kombu==3.0.26
 multiprocess==0.70.3
 ndg-httpsclient==0.4.0
-pathos==0.2a1.dev0
+-e git+https://github.com/uqfoundation/pathos.git@7b7924bb9b5df90d8a0e06c5800b48230eb3d8b2#egg=pathos-master
 pox==0.2.1
 ppft==1.6.4.5
 psycopg2==2.6.1
