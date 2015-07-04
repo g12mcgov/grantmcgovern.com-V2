@@ -9,6 +9,9 @@ import ConfigParser
 from collections import Counter
 from pathos.multiprocessing import ProcessingPool
 
+## Import master models
+from master.models import DevCharts
+
 ## Config.cfg file path
 CONFIG_PATH = os.path.join(
 	os.path.dirname(os.path.realpath(__file__)), 'config.cfg'
@@ -24,18 +27,18 @@ def task():
 	global_logger = configLogger('global')
 	auth = getkeys()
 
-	try:
-		# Instantiate Mongo client
-		client = pymongo.MongoClient(auth['mongo_host'], auth['mongo_port'])
-		db = client.heroku_87fdg4b3
-		try:
-			db.authenticate(auth['mongo_user'], auth['mongo_password'])
-			global_logger.info('Successfully authenticated w/ MongoDB...')
-		except:
-			raise Exception('Could not authenticate MongoDB') 
-		global_logger.info('Successfully established MongoDB connection...')
-	except pymongo.errors.ConnectionFailure as err:
-		raise err
+	# try:
+	# 	# Instantiate Mongo client
+	# 	client = pymongo.MongoClient(auth['mongo_host'], auth['mongo_port'])
+	# 	db = client.heroku_87fdg4b3
+	# 	try:
+	# 		db.authenticate(auth['mongo_user'], auth['mongo_password'])
+	# 		global_logger.info('Successfully authenticated w/ MongoDB...')
+	# 	except:
+	# 		raise Exception('Could not authenticate MongoDB') 
+	# 	global_logger.info('Successfully established MongoDB connection...')
+	# except pymongo.errors.ConnectionFailure as err:
+	# 	raise err
 
 	dropbox = Dropbox(
 		auth['key'], 
@@ -227,11 +230,22 @@ def insert(content):
 	'data': content,
 	'date': datetime.datetime.now().strftime("%A %Y-%m-%d %H:%M:%S")
 	}
+
 	try:
-		db.DevCharts.insert(schema)
+		new_devchart_entry = DevCharts.objects.create(
+			data=schema['data']
+			)
+		
+		new_devchart_entry.save()
 		global_logger.info('Query Insert, Ok.')
 	except pymongo.errors.OperationFailure as err:
 		raise err
+
+	# try:
+	# 	db.DevCharts.insert(schema)
+	# 	global_logger.info('Query Insert, Ok.')
+	# except pymongo.errors.OperationFailure as err:
+	# 	raise err
 
 def getkeys():
 	"""

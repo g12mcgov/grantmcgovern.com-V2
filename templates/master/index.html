@@ -244,8 +244,61 @@
 			</div>
 		</div>
 	</div>
+	<div class="code" style='background-image: url({% static 'img/footer_lodyas.png' %});'>
+		<h1>My Code Breakdown</h1>
+		<div id="chart"></div>
+		<!-- Generate Highcharts -->
+		<script type="text/javascript">
+			var devcharts = {{content|safe}};
+			var chart_data = [];
+
+		    for(var i = 0; i < devcharts.languages.length; i++) { 
+		        var temp = new Array(
+		        	devcharts.languages[i], 
+		        	devcharts.counts[i]
+		        	);
+		        chart_data[i] = temp;     
+		    }
+		    
+		    $('#chart').highcharts({
+		        chart: {
+		            plotBackgroundColor: null,
+		            plotShadow: false,
+		            backgroundColor:'rgba(255, 255, 255, 0)',
+		        },
+		        style: {
+            		fontFamily: 'Source Code Pro'
+        		},
+		        title: {
+		            text: ""
+		        },
+		        tooltip: {
+		            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		        },
+		        plotOptions: {
+		            pie: {
+		                allowPointSelect: true,
+		                cursor: 'pointer',
+		                dataLabels: {
+		                    enabled: true,
+		                    format: '<b>{point.name}</b>: {point.percentage:.2f} %',
+		                    style: {
+		                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'white'
+		                    }
+		                }
+		            }
+		        },
+		        series: [{
+		            type: 'pie',
+		            name: 'Code Construct',
+		            data: chart_data
+		        }]
+		    });
+		</script>
+		<h2>(Based on <b>live</b> information pulled from my Dropbox)</h2>
+	</div>
+	<div class="work-experience">
+		<h1>Work Experience</h1>
+	</div>
 
 {% include "footer.html" %}
-
-
-

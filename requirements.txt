@@ -1,4 +1,4 @@
-Django==1.7
+Django==1.5.11
 Pillow==2.8.2
 amqp==1.4.6
 anyjson==0.3.3
@@ -8,7 +8,9 @@ cryptography==0.9.1
 -e git+https://github.com/uqfoundation/dill.git@27d9dcf69108125f9532e20db9d685d37484c6f1#egg=dill-master
 dj-database-url==0.3.0
 dj-static==0.0.6
+django-mongodb-engine==0.5.2
 django-toolbelt==0.0.1
+djangotoolbox==1.6.2
 dropbox==2.2.0
 enum34==1.0.4
 gunicorn==19.3.0
@@ -17,6 +19,7 @@ ipaddress==1.0.7
 kombu==3.0.26
 multiprocess==0.70.3
 ndg-httpsclient==0.4.0
+newrelic==2.52.0.40
 -e git+https://github.com/uqfoundation/pathos.git@7b7924bb9b5df90d8a0e06c5800b48230eb3d8b2#egg=pathos-master
 pox==0.2.1
 ppft==1.6.4.5
@@ -24,7 +27,7 @@ psycopg2==2.6.1
 pyOpenSSL==0.15.1
 pyasn1==0.1.8
 pycparser==2.14
-pymongo==3.0.3
+pymongo==2.8.1
 pytz==2015.4
 requests==2.7.0
 six==1.9.0

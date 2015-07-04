@@ -12,12 +12,31 @@
 
 
 ## Module Imports
+import json
 import datetime
 
 ## Django Imports 
 from django.shortcuts import render
 from django.http import HttpResponse
 
+## Import master models
+from master.models import DevCharts
+
 def index(request):
-	message = {"hey": "yo"}
-	return render(request, 'master/index.html', message)
+	# Grab latest DevCharts object
+	devcharts_obj = DevCharts.objects.filter().latest('date')
+	devcharts_data = {
+	'languages': [item['language'] for item in devcharts_obj.data], 
+	'counts': [item['files'] for item in devcharts_obj.data]
+	}
+
+	# print "\n\n\n"
+	# print devcharts_obj.data
+	# print "\n\n\n"
+
+	print json.dumps(devcharts_data)
+	return render(
+		request, 
+		'master/index.html', 
+		{ "content": json.dumps(devcharts_data) }
+		)
