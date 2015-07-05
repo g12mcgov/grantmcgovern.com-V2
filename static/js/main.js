@@ -25,7 +25,7 @@ $(document).ready(function() {
     function start_typist() {
         $(function($) {
             $('.typist').typist({
-                speed: 13,
+                speed: 9,
                 text: 'Grant McGovern'
             });
         });
@@ -45,9 +45,26 @@ $(document).ready(function() {
 
     $('#terminal').hover(function() {
         pg.pause();
+        $('.typist').typistStop();
         $('#particles').css('background-color', 'rgba(0, 0, 0, 0.70)'); 
     }, function() {
         $('#particles').css('background-color', 'rgba(0, 0, 0, 0.85)');
         pg.start();
+    });
+
+    /* LinkedIn */
+    $.ajax({
+        type: 'GET',
+        jsonpCallback: "callback",
+        dataType: 'jsonp',
+        url: 'https://api.linkedin.com/v1/people/~',
+        data: {'format': 'jsonp' },
+        headers: {'Authorization': 'Bearer AQUuDHPQFjREOyCTDYDQZk86HVtUJzQ2WELeu_7biY0YB6MI4e0HcI-ukocvjombyxB26f-xBA-oIm_L82MR0PiICCsUc-fJXRh15ewQbBw_Y-rNZfOoblL4jYkcecPpL4HTQIxX1igDdQm9ANdyyBAmPFDNuXCrwguh8CWoHWusLMclloI'},
+        success: function(reponse) {
+            console.log(this.url);
+            console.log(reponse);
+        },
+        error: function(err) {
+        }
     });
 });

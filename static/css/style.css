@@ -39,6 +39,12 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Source Code Pro', serif !important;
 }
 
+@media only screen and (max-width: 480px) {
+	#particles h1 {
+		font-size: 60px;
+	}
+}
+
 .middle h1 {
 	margin-top: 20px;
 	text-align: center;

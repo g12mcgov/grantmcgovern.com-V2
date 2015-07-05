@@ -13,6 +13,19 @@
     top: 300px;
 }
 
+@media only screen and (max-width: 480px) {
+	#terminal {
+		width: 100% !important;
+		white-space: nowrap;
+	}
+	/*#terminal span {
+		font-size: 0.75em;
+	}
+	#terminal input {
+		font-size: 0.75em;
+	}*/
+}
+
 #terminal span {
 	color: #00FF00;
 }
