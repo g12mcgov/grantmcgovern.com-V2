@@ -138,7 +138,14 @@ class Dropbox:
 		]
 
 		# Compute breakdowns
-		breakdown = [self.search(extension) for extension in extensions]
+		breakdown = []
+		for extension in extensions:
+			result = self.search(extension)
+			# Only care about find results w/ a count > 0
+			if not result['files']:
+				breakdown.append(result)
+
+		print breakdown
 		#breakdown = pool.map(self.search, extensions)
 		distribution = self.compute(breakdown)
 		insert(distribution)
@@ -231,6 +238,8 @@ def insert(content):
 	'date': datetime.datetime.now().strftime("%A %Y-%m-%d %H:%M:%S")
 	}
 
+	print json.dumps(content, separators=(',',':'), indent=4)
+
 	try:
 		new_devchart_entry = DevCharts.objects.create(
 			data=schema['data']
@@ -241,11 +250,13 @@ def insert(content):
 	except pymongo.errors.OperationFailure as err:
 		raise err
 
-	# try:
-	# 	db.DevCharts.insert(schema)
-	# 	global_logger.info('Query Insert, Ok.')
-	# except pymongo.errors.OperationFailure as err:
-	# 	raise err
+def merge(languages, counts):
+	i = 0
+	assert(len(languages) == len(counts))
+	for i, (language, count) in enumerate(zip(languages, counts)):
+		# Duplicates, merge
+		if languages[i] == languages[i+1]:
+			print language
 
 def getkeys():
 	"""

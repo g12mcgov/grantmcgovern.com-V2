@@ -40,3 +40,7 @@ def index(request):
 		'master/index.html', 
 		{ "content": json.dumps(devcharts_data) }
 		)
+
+def about(request):
+	context_dict = {'temp': 'temp'}
+	return render(request, 'master/about.html', context_dict)
