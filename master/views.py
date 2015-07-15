@@ -1,14 +1,14 @@
+#!/usr/bin/env python
+
+# -*- coding: utf-8 -*-
 #
+# @Author: grantmcgovern
+# @Date:   2015-07-12 13:56:00
+# @Email:   me@grantmcgovern.com
+# @Web:    http://grantmcgovern.com
 #
-#   master/views.py
-#
-#   Author: Grant McGovern
-#   Date: 27 June 2015
-#
-#   Personal Site V2
-#
-#   Contact: grantmcgov@gmail.com
-#
+# @Last Modified by:   grantmcgovern
+# @Last Modified time: 2015-07-13 21:38:48
 
 
 ## Module Imports
@@ -20,7 +20,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 ## Import master models
-from master.models import DevCharts
+from master.models import DevCharts, WorkExperience
 
 def index(request):
 	# Grab latest DevCharts object
@@ -30,16 +30,16 @@ def index(request):
 	'counts': [item['files'] for item in devcharts_obj.data]
 	}
 
-	# print "\n\n\n"
-	# print devcharts_obj.data
-	# print "\n\n\n"
+	# Get all work experience objects (in chronological order)
+	work_experiences = reversed(WorkExperience.objects.all())
 
-	print json.dumps(devcharts_data)
 	return render(
 		request, 
 		'master/index.html', 
-		{ "content": json.dumps(devcharts_data) }
-		)
+		{
+			"content": json.dumps(devcharts_data),
+			"work_experiences": work_experiences
+		})
 
 def about(request):
 	context_dict = {'temp': 'temp'}

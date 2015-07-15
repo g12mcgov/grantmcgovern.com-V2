@@ -1,11 +1,15 @@
+#!/usr/bin/env python
+
+# -*- coding: utf-8 -*-
 #
-#	fetch_linkedin.py
+# @Author: grantmcgovern
+# @Date:   2015-07-05 20:30:13
+# @Email:   me@grantmcgovern.com
+# @Web:    http://grantmcgovern.com
 #
-#	Author: Grant McGovern
-#	Date: Sun 5 July 2015
-#
-#	Defines a class for handeling the LinkedIn API
-#
+# @Last Modified by:   grantmcgovern
+# @Last Modified time: 2015-07-12 19:58:13
+
 
 import sys
 import logging

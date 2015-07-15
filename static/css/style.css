@@ -1,8 +1,18 @@
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p, span {
 	margin-top: 0px;
+	margin-bottom: 0px;
 	font-family: 'Source Code Pro', serif;
 }
 
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+	
 .top {
 	height: 800px;
 	width: 100%;
@@ -45,6 +55,12 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+@media only screen and (max-width: 768px) {
+	#particles h1 {
+		font-size: 60px;
+	}
+}
+
 .terminal-hover-text {
 	top: 725px;
 	color: white;
@@ -56,6 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .middle h1 {
 	margin-top: 20px;
+	margin-bottom: 20px;
 	text-align: center;
 	font-size: 5em;
 	font-family: 'Source Code Pro', serif;
@@ -65,10 +82,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 1em;
 	text-align: center;
 	font-family: 'Source Code Pro', serif;
-}
-
-.projects {
-	margin-bottom: 40px;
 }
 
 .bio {
@@ -86,20 +99,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 1em;
 	font-family: 'Source Code Pro', serif;
 }
-
-/*.image-holder {
-	height: 275px;
-	width: 275px;
-	display: block;
-    margin: 0 auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 1px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
-}
-*/
 
 .image-holder {
 	margin: 0 auto;
@@ -148,21 +147,25 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 25px;
 }
 
+.projects {
+	padding-bottom: 40px;
+}
+
 .projects h1 {
-	font-size: 4em;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: white;
+	font-size: 5em;
 	font-family: 'Source Code Pro', serif;
 	text-align: center;
 }
 
 .footer {
-	/*position: absolute;*/	
-	bottom: 0;
-	height: 140px;
-	background-color: #f5f5f5;
+	padding-bottom: 10px;
+  	background-color: #f5f5f5;
 }
 
 .footer p {
-	margin-top: 10px;
 	text-align: center;
 }
 
@@ -175,8 +178,13 @@ h1, h2, h3, h4, h5, h6 {
 	width: 25px;
 }
 
+.red-heart {
+	font-size: 120%;
+	color: red;
+}
+
 .code {
-	height: 700px;
+	height: auto;
 	width: auto;
 	color: white;
 	padding-bottom: 50px;
@@ -185,7 +193,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .code h1 {
 	text-align: center;
-	font-size: 3em;
+	font-size: 5em;
 }
 
 .code h2 {
@@ -193,15 +201,88 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 1em;
 }
 
+.work-experience {
+	color: white;
+	font-family: 'Source Code Pro', serif;
+}
+
+@media only screen and (min-width: 768px) {
+	.work-experience-entry {
+		width: 800px;
+		margin: 0 auto;
+	}
+}
+
 .work-experience h1 {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: white;
+	font-size: 5em;
 	text-align: center;
+}
+
+.work-experience a {
+	color: white;
+}
+
+.work-experience h2 {
+	color: white;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.work-experience-image {
+	height: 50px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.social-icons {
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.resume {
+
+}
+
+.resume h1 {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: white;
+	font-size: 5em;
+	text-align: center;
+}
+
+.resume h2 {
+	color: white;
+	text-align: center;
+	font-size: 1em;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.resume iframe {
+	margin: 0 auto;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+	.wrapper {
+		width: 100%;
+	}
 }
 
 /******* ABOUT PAGE *********/
 .about {
-	background-size: contain;
-	background-repeat: no-repeat;
-	width: 100%;
-	height: 0;
+	color: white;
+	background-size: cover;
+	background-repeat: repeat;
+	height: 100%;
 	padding-top: 66.64%; /* (img-height / img-width * width) */ /* (853 / 1280 * 100) */
 }

@@ -1,14 +1,15 @@
+#!/usr/bin/env python
+
+# -*- coding: utf-8 -*-
 #
+# @Author: grantmcgovern
+# @Date:   2015-07-12 15:24:44
+# @Email:   me@grantmcgovern.com
+# @Web:    http://grantmcgovern.com
 #
-#   settings.py
-#
-#   Author: Grant McGovern
-#   Date: 27 June 2015
-#
-#   Personal Site V2
-#
-#   Contact: grantmcgov@gmail.com
-#
+# @Last Modified by:   grantmcgovern
+# @Last Modified time: 2015-07-12 19:58:46
+
 
 """
 Django settings for grantmcgovern project.
@@ -125,12 +126,18 @@ STATICFILES_DIRS = (
     STATIC_PATH,
 )
 
-## Bower
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'djangobower.finders.BowerFinder',
 )
+
+## Media 
+MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media')
+
+MEDIA_URL = '/media/'
+
+## Bower
 
 BOWER_COMPONENTS_ROOT = os.path.join(PROJECT_ROOT, 'components')
 

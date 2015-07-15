@@ -1,3 +1,16 @@
+#!/usr/bin/env python
+
+# -*- coding: utf-8 -*-
+#
+# @Author: grantmcgovern
+# @Date:   2015-06-28 23:09:09
+# @Email:   me@grantmcgovern.com
+# @Web:    http://grantmcgovern.com
+#
+# @Last Modified by:   grantmcgovern
+# @Last Modified time: 2015-07-12 19:58:29
+
+
 """
 WSGI config for grantmcgovern project.
 

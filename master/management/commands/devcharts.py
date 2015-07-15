@@ -1,3 +1,16 @@
+#!/usr/bin/env python
+
+# -*- coding: utf-8 -*-
+#
+# @Author: grantmcgovern
+# @Date:   2015-07-11 15:32:55
+# @Email:   me@grantmcgovern.com
+# @Web:    http://grantmcgovern.com
+#
+# @Last Modified by:   grantmcgovern
+# @Last Modified time: 2015-07-12 19:58:01
+
+
 import os
 import sys
 import json
@@ -6,6 +19,7 @@ import dropbox
 import logging
 import datetime
 import ConfigParser
+from itertools import groupby
 from collections import Counter
 from pathos.multiprocessing import ProcessingPool
 
@@ -14,8 +28,7 @@ from master.models import DevCharts
 
 ## Config.cfg file path
 CONFIG_PATH = os.path.join(
-	os.path.dirname(os.path.realpath(__file__)), 'config.cfg'
-	)
+	os.path.dirname(os.path.realpath(__file__)), 'config.cfg')
 
 def task():
 	"""
@@ -142,13 +155,13 @@ class Dropbox:
 		for extension in extensions:
 			result = self.search(extension)
 			# Only care about find results w/ a count > 0
-			if not result['files']:
+			if result['files']:
 				breakdown.append(result)
 
-		print breakdown
 		#breakdown = pool.map(self.search, extensions)
-		distribution = self.compute(breakdown)
-		insert(distribution)
+		languages = self.compute(breakdown)
+		merged = merge(languages)
+		insert(merged)
 
 	def search(self, extension):
 		"""
@@ -181,7 +194,8 @@ class Dropbox:
 		"""
 		total = sum([count['files'] for count in languages])
 		for language in languages:
-			language['percentage'] = (language['files'] / float(total))
+			# Prevents a potential divide-by-zero exception
+			language['percentage'] = 0.0 if not float(total) else (language['files'] / float(total))
 		return languages
 
 	def tag(self, extension):
@@ -250,13 +264,28 @@ def insert(content):
 	except pymongo.errors.OperationFailure as err:
 		raise err
 
-def merge(languages, counts):
-	i = 0
-	assert(len(languages) == len(counts))
-	for i, (language, count) in enumerate(zip(languages, counts)):
-		# Duplicates, merge
-		if languages[i] == languages[i+1]:
-			print language
+def merge(languages):
+	"""
+	Merges duplicate languages by summing their values
+	(i.e. '.cpp' + '.h' files yield two C++ entries)
+	"""
+	languages.sort(key=lambda d: d['language'])
+
+	merged = []
+	for k, g in groupby(languages, key=lambda k: k['language']):
+		temp_dict = {}
+ 		temp_list = list(g)
+ 		
+ 		if len(temp_list) > 1:
+ 			temp_dict['files'] = sum([item['files'] for item in temp_list])
+ 		else:
+ 			temp_dict['files'] = temp_list[0]['files']
+ 		temp_dict['language'] = temp_list[0]['language']
+ 		temp_dict['percentage'] = temp_list[0]['percentage']
+		
+		merged.append(temp_dict)
+
+	return merged
 
 def getkeys():
 	"""

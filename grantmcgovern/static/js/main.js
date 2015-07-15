@@ -56,12 +56,15 @@ $(document).ready(function() {
         pg.pause();
         $('.typist').typistStop();
         $('#particles').css('background-color', 'rgba(0, 0, 0, 0.70)'); 
+        
         terminal_hover_text.hide();
         terminal_hover_text.insertAfter('#terminal');
         terminal_hover_text.fadeIn(1500);
+    
     }, function() {
         $('#particles').css('background-color', 'rgba(0, 0, 0, 0.85)');
-        terminal_hover_text.fadeOut(10000);
+        terminal_hover_text.fadeOut(1500);
+
         pg.start();
     });
 
@@ -73,27 +76,11 @@ $(document).ready(function() {
             if(!typist_lock) {
                 $(this.element).typist({
                     speed: 9,
-                    text: "Hi, I'm Grant"
+                    text: "Hi, I'm Grant."
                 });
                 typist_lock = true;
             }
         },
         offset: '50%'
     });
-
-    /* LinkedIn */
-    // $.ajax({
-    //     type: 'GET',
-    //     jsonpCallback: "callback",
-    //     dataType: 'jsonp',
-    //     url: 'https://api.linkedin.com/v1/people/~',
-    //     data: {'format': 'jsonp' },
-    //     headers: {'Authorization': 'Bearer AQUuDHPQFjREOyCTDYDQZk86HVtUJzQ2WELeu_7biY0YB6MI4e0HcI-ukocvjombyxB26f-xBA-oIm_L82MR0PiICCsUc-fJXRh15ewQbBw_Y-rNZfOoblL4jYkcecPpL4HTQIxX1igDdQm9ANdyyBAmPFDNuXCrwguh8CWoHWusLMclloI'},
-    //     success: function(reponse) {
-    //         console.log(this.url);
-    //         console.log(reponse);
-    //     },
-    //     error: function(err) {
-    //     }
-    // });
 });

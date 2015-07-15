@@ -1,4 +1,15 @@
 #!/usr/bin/env python
+
+# -*- coding: utf-8 -*-
+#
+# @Author: grantmcgovern
+# @Date:   2015-07-11 15:37:15
+# @Email:   me@grantmcgovern.com
+# @Web:    http://grantmcgovern.com
+#
+# @Last Modified by:   grantmcgovern
+# @Last Modified time: 2015-07-12 19:57:11
+
 import os
 import sys
 

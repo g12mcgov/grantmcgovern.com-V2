@@ -23,6 +23,16 @@
 	}
 }
 
+@media only screen and (max-width: 768px) {
+	#terminal {
+		width: auto !important;
+		white-space: nowrap;
+		margin-left: 5px;
+		margin-right: 5px;
+		/*overflow-x: hidden;*/
+	}
+}
+
 #terminal span {
 	color: #00FF00;
 }
