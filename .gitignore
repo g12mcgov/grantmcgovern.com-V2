@@ -60,3 +60,6 @@ target/
 
 # New Relig
 newrelic.init
+
+# Bower
+/bower_components
