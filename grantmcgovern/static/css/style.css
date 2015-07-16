@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 
 .bio p {
-	font-size: 1em;
+	font-size: 1.25em;
 	font-family: 'Source Code Pro', serif;
 }
 
@@ -152,6 +152,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 
 .projects h1 {
+	/*text-shadow: 1px 1.25px black;*/
 	padding-top: 40px;
 	padding-bottom: 40px;
 	color: white;
@@ -192,6 +193,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 
 .code h1 {
+	/*text-shadow: 1px 1.25px black;*/
 	text-align: center;
 	font-size: 5em;
 }
@@ -215,6 +217,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 
 .work-experience h1 {
+	/*text-shadow: 1px 1.25px black;*/
 	padding-top: 40px;
 	padding-bottom: 40px;
 	color: white;

@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 
 .bio p {
-	font-size: 1em;
+	font-size: 1.25em;
 	font-family: 'Source Code Pro', serif;
 }
 
@@ -152,6 +152,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 
 .projects h1 {
+	/*text-shadow: 1px 1.25px black;*/
 	padding-top: 40px;
 	padding-bottom: 40px;
 	color: white;
@@ -192,6 +193,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 
 .code h1 {
+	/*text-shadow: 1px 1.25px black;*/
 	text-align: center;
 	font-size: 5em;
 }
@@ -215,6 +217,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 
 .work-experience h1 {
+	/*text-shadow: 1px 1.25px black;*/
 	padding-top: 40px;
 	padding-bottom: 40px;
 	color: white;
@@ -223,6 +226,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 
 .work-experience-entry a {
+	color: white;
 	font-size: 1em;
 }
 
@@ -243,7 +247,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 
 #more-experience-link a {
-	color: blue;
+	color: black;
 }
 
 .work-experience-image {
@@ -291,6 +295,37 @@ h1, h2, h3, h4, h5, h6, p, span {
 	.wrapper {
 		width: 100%;
 	}
+}
+
+.contactInfo {
+	height: 100%;
+	width: 100%;
+	background: white;
+}
+
+.contactInfo .panel {
+	border-color: black;
+	margin: 0 auto;
+	width: 200px;
+	margin-bottom: 40px;
+}
+
+.contactInfo h1 {
+	color: black;
+}
+
+#contactInfoContainer {
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+#mailIcon {
+	width: 50px;
+	display: block;
+	margin: 0 auto;
 }
 
 /******* ABOUT PAGE *********/

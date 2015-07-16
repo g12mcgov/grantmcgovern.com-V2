@@ -14,6 +14,9 @@ $(document).ready(function() {
     start_typist();
     add_card_flips();
 
+    // Hide the 'Highcharts.com' text
+    $('text:contains("Highcharts.com")').css('display', 'none');
+
     function start_background() {
         $('#particles').particleground({
             dotColor: '#FFFFFF',

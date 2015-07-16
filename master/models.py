@@ -8,7 +8,7 @@
 # @Web:    http://grantmcgovern.com
 #
 # @Last Modified by:   grantmcgovern
-# @Last Modified time: 2015-07-13 20:24:08
+# @Last Modified time: 2015-07-15 22:49:51
 
 
 import datetime
@@ -43,6 +43,7 @@ class WorkExperience(models.Model):
 	image = models.ImageField(upload_to='master')
 	location = models.CharField(max_length=30)
 	daterange = models.CharField(max_length=30)
+	url = models.URLField()
 
 	def summary_to_list(self):
 		"""
