@@ -204,6 +204,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 .work-experience {
 	color: white;
 	font-family: 'Source Code Pro', serif;
+	padding-bottom: 40px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -221,14 +222,28 @@ h1, h2, h3, h4, h5, h6, p, span {
 	text-align: center;
 }
 
-.work-experience a {
-	color: white;
+.work-experience-entry a {
+	font-size: 1em;
 }
 
 .work-experience h2 {
 	color: white;
 	text-align: center;
 	font-size: 1.5em;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.work-experience li {
+	word-wrap: break-word;
+}
+
+.work-experience p {
+	text-align: center;
+}
+
+#more-experience-link a {
+	color: blue;
 }
 
 .work-experience-image {
@@ -283,6 +298,56 @@ h1, h2, h3, h4, h5, h6, p, span {
 	color: white;
 	background-size: cover;
 	background-repeat: repeat;
-	height: 100%;
+	height: 100vh;
 	padding-top: 66.64%; /* (img-height / img-width * width) */ /* (853 / 1280 * 100) */
+}
+
+.about-container {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.about-heading {
+	background: rgba(102, 102, 102, 0.4);
+	position: absolute;
+	top: 30px;
+	width: 420px;
+}
+
+.about-subtext {
+	background: rgba(102, 102, 102, 0.4);
+	top: 230px;
+	position: absolute;
+	width: 420px;
+}
+
+
+#first-line {
+	font-size: 2em;
+}
+
+#second-line {
+	font-size: 3em;
+}
+
+#third-line {
+	font-size: 5em;
+}
+
+@media only screen and (max-width: 428px) {
+	.about-heading {
+		width: 350px;
+	}
+	.about-subtext {
+		top: 300px;
+	}
+	#first-line {
+		font-size: 1.5em;
+	}
+	#second-line {
+		font-size: 3em;
+	}
+	#third-line {
+		font-size: 4.15em;
+	}
 }
