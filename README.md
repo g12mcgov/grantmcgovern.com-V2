@@ -13,5 +13,31 @@ Most of the content on the site is *real time*. For example, the "Code Count" gr
 
 Additionally, the "Work Experience" section is dynamically rendered content by using the LinkedIn API. That way, new positions are added in sync with my LinkedIn profile. I originally wanted to do something a little crazy and build the site using either Erlang or [Crow](https://github.com/ipkn/crow) (C++) but found in the spirit of time, templating engines, MongoDB persistence engines, Python/Django was a safe bet.
 
+Installing
+=======
+
+If you're interested in using my site as a clone, here's how you'll need to get it up and running:
+
+1) `$ git clone https://github.com/g12mcgov/grantmcgovern.com-V2`
+
+I suggest you first make a virtual environment. (Install [virualenv](https://virtualenv.pypa.io/en/latest/index.html))
+
+2) `$ virtualenv grantmcgovern`
+
+Then you'll need to run the setup script. 
+
+2) `sudo python setup.py install`
+
+This will create the build package. Then you'll need to create a MongoDB instance. Currently this site runs a lightweight Mongo instance on Heroku via MongoLabs. 
+
+Then, to start the website launch the webserver:
+
+4) `$ python manage.py runserver`
+
+And navigate to your `localhost`:
+
+`http://localhost:8000/` or `http://127.0.0.1:8000/`
+
+
 
 
