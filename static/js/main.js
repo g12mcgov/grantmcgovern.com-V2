@@ -14,19 +14,6 @@ $(document).ready(function() {
     start_typist();
     add_card_flips();
 
-    var notify = function(message) {
-      var $message = $('<p style="display:none;">' + message + '</p>');
-
-      $('.notifications').append($message);
-      $message.slideDown(300, function() {
-        window.setTimeout(function() {
-          $message.slideUp(300, function() {
-            $message.remove();
-          });
-        }, 2000);
-      });
-    };
-
     // Hide the 'Highcharts.com' text
     $('text:contains("Highcharts.com")').css('display', 'none');
 
