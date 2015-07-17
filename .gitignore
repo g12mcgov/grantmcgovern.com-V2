@@ -62,4 +62,4 @@ target/
 newrelic.init
 
 # Bower
-components/bower_components
+# components/bower_components
