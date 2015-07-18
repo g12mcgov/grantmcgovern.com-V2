@@ -297,6 +297,31 @@ h1, h2, h3, h4, h5, h6, p, span {
 	}
 }
 
+/*** CONTACT ***/
+
+.contact {
+	margin-top: 60px;
+  	margin-left: auto;
+  	margin-right: auto;
+	width: 400px;
+	background-color: #fa695c;
+	text-align: center;
+}
+
+/* Media query to snap contact width to 100% on mobile */
+
+.contact h3 {
+	color: white;
+	text-align: center;
+	font-size: 1em;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.contact p {
+	color: black;
+}
+
 .contactInfo {
 	height: 100%;
 	width: 100%;
@@ -307,6 +332,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 	border-color: black;
 	margin: 0 auto;
 	width: 200px;
+	margin-top: 20px;
 	margin-bottom: 40px;
 }
 

@@ -23,6 +23,7 @@ $(document).ready(function() {
             lineColor: '#FFFFFF'
         });
         pg = particleground(document.getElementById('particles'));
+        add_waypoint();
     }
 
     function start_typist() {
@@ -72,18 +73,20 @@ $(document).ready(function() {
     });
 
     /* Setup waypoints */
-    var typist_lock = false;
-    var waypoint = new Waypoint({
-        element: document.getElementById('middle-intro-text'),
-        handler: function() {
-            if(!typist_lock) {
-                $(this.element).typist({
-                    speed: 9,
-                    text: "Hi, I'm Grant."
-                });
-                typist_lock = true;
-            }
-        },
-        offset: '50%'
-    });
+    function add_waypoint() {
+        var typist_lock = false;
+        var waypoint = new Waypoint({
+            element: document.getElementById('middle-intro-text'),
+            handler: function() {
+                if(!typist_lock) {
+                    $(this.element).typist({
+                        speed: 9,
+                        text: "Hi, I'm Grant."
+                    });
+                    typist_lock = true;
+                }
+            },
+            offset: '50%'
+        });
+    };
 });
