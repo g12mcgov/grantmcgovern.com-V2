@@ -308,6 +308,12 @@ h1, h2, h3, h4, h5, h6, p, span {
 	text-align: center;
 }
 
+@media only screen and (max-width: 480px) {
+	.contact {
+		width: 100%;
+	}
+}
+
 /* Media query to snap contact width to 100% on mobile */
 
 .contact h3 {
@@ -315,20 +321,26 @@ h1, h2, h3, h4, h5, h6, p, span {
 	text-align: center;
 	font-size: 1em;
 	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 }
 
 .contact p {
 	color: black;
 }
 
-.contactInfo {
+.contact span {
+	color: white;
+	text-align: center;
+	font-size: 1.75em;
+}
+
+.contact-info {
 	height: 100%;
 	width: 100%;
 	background: white;
 }
 
-.contactInfo .panel {
+.contact-info .panel {
 	border-color: black;
 	margin: 0 auto;
 	width: 200px;
@@ -336,11 +348,11 @@ h1, h2, h3, h4, h5, h6, p, span {
 	margin-bottom: 40px;
 }
 
-.contactInfo h1 {
+.contact-info h1 {
 	color: black;
 }
 
-#contactInfoContainer {
+#contact-info-container {
 	padding-left: 0px;
 	padding-right: 0px;
 	margin-left: auto;
@@ -348,7 +360,7 @@ h1, h2, h3, h4, h5, h6, p, span {
 	width: 100%;
 }
 
-#mailIcon {
+#mail-icon {
 	width: 50px;
 	display: block;
 	margin: 0 auto;
