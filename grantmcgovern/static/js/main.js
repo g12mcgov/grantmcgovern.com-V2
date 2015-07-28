@@ -90,15 +90,13 @@ $(document).ready(function() {
         });
     };
 
-    $('#about-popover').on('click', function(e) {e.preventDefault(); return true;});
-    $("[data-toggle=popover]").popover({html:true});
-    // $('#dropdown-arrow').click(function() {
-    //     $(this).toggle(function(){
-    //         console.log('opened');
-    //         //$(this).toggleClass("glyphicon glyphicon-chevron-down");
-    //     }, function() {
-    //         console.log('closed');
-    //         $(this).toggleClass("glyphicon glyphicon-chevron-up");
-    //     });
-    // });
+    $('#about-this-site').on('click', function(event){
+        event.preventDefault();
+        $(this).popover({
+            html: true,
+            content: "LA",
+            placement: "top"
+        });
+        $(this).popover('toggle');
+    });
 });
