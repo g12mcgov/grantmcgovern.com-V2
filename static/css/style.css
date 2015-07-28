@@ -1,0 +1,426 @@
+h1, h2, h3, h4, h5, h6, p, span {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: 'Source Code Pro', serif;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+	
+.top {
+	height: 800px;
+	width: 100%;
+	position: relative;
+}
+
+.top h1 {
+	top: 0;
+	width: 100%;
+	color: white;
+	margin-top: 120px;
+	text-align: center;
+	position: absolute; 
+	text-align: center;
+	font-family: 'Source Code Pro', serif;
+}
+
+#particles {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+#particles h1 {
+  text-transform: uppercase;
+  font-size: 85px;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  font-family: 'Source Code Pro', serif;
+}
+
+#particles span {
+	font-family: 'Source Code Pro', serif !important;
+}
+
+@media only screen and (max-width: 480px) {
+	#particles h1 {
+		font-size: 60px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#particles h1 {
+		font-size: 60px;
+	}
+}
+
+.terminal-hover-text {
+	top: 725px;
+	color: white;
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.middle h1 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 5em;
+	font-family: 'Source Code Pro', serif;
+}
+
+.middle h2 {
+	font-size: 1em;
+	text-align: center;
+	font-family: 'Source Code Pro', serif;
+}
+
+.bio {
+	margin: 0 auto;
+	width: 50%;
+}
+
+@media (max-width: 800px) {
+	.bio {
+		width: 100%;
+	}
+}
+
+.bio p {
+	font-size: 1.25em;
+	font-family: 'Source Code Pro', serif;
+}
+
+.image-holder {
+	margin: 0 auto;
+	width: 250px;
+    height: 250px;
+}
+
+.image-holder img {
+	border-style: solid;
+	border-width: 2px;
+    border-color: black;
+    box-shadow: 20px 20px 20px #585753;
+}
+
+.img-responsive {
+	/*height: 250px;*/
+}
+
+.back {
+	background-color: black;
+	text-align: center;
+}
+
+.back span {
+	color: white;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	font-size: 1em;
+	font-family: 'Source Code Pro', serif;
+}
+
+.back a {
+	color: white;
+}
+
+.transparent-button {
+	background: none;
+}
+
+.transparent-button:focus {
+	background-color: none;
+}
+
+.col-md-4 {
+	margin-top: 25px;
+}
+
+.projects {
+	padding-bottom: 40px;
+}
+
+.projects h1 {
+	/*text-shadow: 1px 1.25px black;*/
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: white;
+	font-size: 5em;
+	font-family: 'Source Code Pro', serif;
+	text-align: center;
+}
+
+.footer {
+	padding-bottom: 10px;
+  	background-color: #f5f5f5;
+}
+
+.footer p {
+	text-align: center;
+}
+
+.footer a {
+	text-align: center;
+}
+
+.footer img {
+	margin-left: 7px;
+	width: 25px;
+}
+
+.red-heart {
+	font-size: 120%;
+	color: red;
+}
+
+.code {
+	height: auto;
+	width: auto;
+	color: white;
+	padding-bottom: 50px;
+	padding-top: 50px;
+}
+
+.code h1 {
+	/*text-shadow: 1px 1.25px black;*/
+	text-align: center;
+	font-size: 5em;
+}
+
+.code h2 {
+	text-align: center;
+	font-size: 1em;
+}
+
+.work-experience {
+	color: white;
+	font-family: 'Source Code Pro', serif;
+	padding-bottom: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+	.work-experience-entry {
+		width: 800px;
+		margin: 0 auto;
+	}
+}
+
+.work-experience h1 {
+	/*text-shadow: 1px 1.25px black;*/
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: white;
+	font-size: 5em;
+	text-align: center;
+}
+
+.work-experience-entry a {
+	color: white;
+	font-size: 1em;
+}
+
+.work-experience h2 {
+	color: white;
+	text-align: center;
+	font-size: 1.5em;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.work-experience li {
+	word-wrap: break-word;
+}
+
+.work-experience p {
+	text-align: center;
+}
+
+#more-experience-link a {
+	color: black;
+}
+
+.work-experience-image {
+	height: 50px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.social-icons {
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.resume {
+
+}
+
+.resume h1 {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: white;
+	font-size: 5em;
+	text-align: center;
+}
+
+.resume h2 {
+	color: white;
+	text-align: center;
+	font-size: 1em;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.resume iframe {
+	margin: 0 auto;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+	.wrapper {
+		width: 100%;
+	}
+}
+
+/*** CONTACT ***/
+
+.contact {
+	margin-top: 60px;
+  	margin-left: auto;
+  	margin-right: auto;
+	width: 400px;
+	background-color: #fa695c;
+	text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+	.contact {
+		width: 100%;
+	}
+}
+
+/* Media query to snap contact width to 100% on mobile */
+
+.contact h3 {
+	color: white;
+	text-align: center;
+	font-size: 1em;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.contact p {
+	color: black;
+}
+
+.contact span {
+	color: white;
+	text-align: center;
+	font-size: 1.75em;
+}
+
+.contact-info {
+	height: 100%;
+	width: 100%;
+	background: white;
+}
+
+.contact-info .panel {
+	border-color: black;
+	margin: 0 auto;
+	width: 200px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.contact-info h1 {
+	color: black;
+}
+
+#contact-info-container {
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+#mail-icon {
+	width: 50px;
+	display: block;
+	margin: 0 auto;
+}
+
+/******* ABOUT PAGE *********/
+.about {
+	color: white;
+	background-size: cover;
+	background-repeat: repeat;
+	height: 100vh;
+	padding-top: 66.64%; /* (img-height / img-width * width) */ /* (853 / 1280 * 100) */
+}
+
+.about-container {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.about-heading {
+	background: rgba(102, 102, 102, 0.4);
+	position: absolute;
+	top: 30px;
+	width: 420px;
+}
+
+.about-subtext {
+	background: rgba(102, 102, 102, 0.4);
+	top: 230px;
+	position: absolute;
+	width: 420px;
+}
+
+
+#first-line {
+	font-size: 2em;
+}
+
+#second-line {
+	font-size: 3em;
+}
+
+#third-line {
+	font-size: 5em;
+}
+
+@media only screen and (max-width: 428px) {
+	.about-heading {
+		width: 350px;
+	}
+	.about-subtext {
+		top: 300px;
+	}
+	#first-line {
+		font-size: 1.5em;
+	}
+	#second-line {
+		font-size: 3em;
+	}
+	#third-line {
+		font-size: 4.15em;
+	}
+}
