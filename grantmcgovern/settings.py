@@ -8,7 +8,7 @@
 # @Web:    http://grantmcgovern.com
 #
 # @Last Modified by:   grantmcgovern
-# @Last Modified time: 2015-07-12 19:58:46
+# @Last Modified time: 2015-07-27 22:05:10
 
 
 """
@@ -57,7 +57,7 @@ TEMPLATE_DEBUG = True
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.herokuapp.com', 'grantmcgovern.com']
 
 # Application definition
 
