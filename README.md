@@ -20,7 +20,7 @@ If you're interested in using my site as a clone, here's how you'll need to get 
 
 1) `$ git clone https://github.com/g12mcgov/grantmcgovern.com-V2`
 
-I suggest you first make a virtual environment. (Install [virualenv](https://virtualenv.pypa.io/en/latest/index.html))
+I suggest you first make a virtual environment. (Install [virtualenv](https://virtualenv.pypa.io/en/latest/index.html))
 
 2) `$ virtualenv grantmcgovern`
 

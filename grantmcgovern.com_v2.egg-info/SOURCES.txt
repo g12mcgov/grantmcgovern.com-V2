@@ -1,0 +1,6 @@
+setup.py
+grantmcgovern.com_v2.egg-info/PKG-INFO
+grantmcgovern.com_v2.egg-info/SOURCES.txt
+grantmcgovern.com_v2.egg-info/dependency_links.txt
+grantmcgovern.com_v2.egg-info/requires.txt
+grantmcgovern.com_v2.egg-info/top_level.txt
