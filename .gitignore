@@ -50,7 +50,7 @@ coverage.xml
 
 # Django stuff:
 *.log
-grantmcgovern/settings.py
+# grantmcgovern/settings.py
 
 # Sphinx documentation
 docs/_build/
