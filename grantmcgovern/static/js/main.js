@@ -90,13 +90,13 @@ $(document).ready(function() {
         });
     };
 
-    $('#about-this-site').on('click', function(event){
-        event.preventDefault();
-        $(this).popover({
-            html: true,
-            content: "LA",
-            placement: "top"
-        });
-        $(this).popover('toggle');
-    });
+    // $('#about-this-site').on('click', function(event){
+    //     event.preventDefault();
+    //     $(this).popover({
+    //         html: true,
+    //         content: "LA",
+    //         placement: "top"
+    //     });
+    //     $(this).popover('toggle');
+    // });
 });
