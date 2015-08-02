@@ -8,7 +8,7 @@
 # @Web:    http://grantmcgovern.com
 #
 # @Last Modified by:   grantmcgovern
-# @Last Modified time: 2015-07-27 22:05:10
+# @Last Modified time: 2015-07-31 09:49:59
 
 
 """
@@ -50,7 +50,7 @@ TEMPLATE_DIRS = (
 SECRET_KEY = 'r(h2p$h&2^o^96s!d#!!hk@sdg7!3%%+$*p$i4_=jv6dpu2e=w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
