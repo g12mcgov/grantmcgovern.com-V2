@@ -7,8 +7,8 @@
 # @Email:   me@grantmcgovern.com
 # @Web:    http://grantmcgovern.com
 #
-# @Last Modified by:   grantmcgovern
-# @Last Modified time: 2015-07-13 21:38:48
+# @Last Modified by:   Grant McGovern
+# @Last Modified time: 2016-10-12 22:49:43
 
 
 ## Module Imports
@@ -31,7 +31,15 @@ def index(request):
 	}
 
 	# Get all work experience objects (in chronological order)
-	work_experiences = reversed(WorkExperience.objects.all())
+	work_experiences = list(reversed(WorkExperience.objects.all()))
+	# This is a terrible hacky fix to get the most recent work experience
+	# object to show up first, this is because I was silly and neglected
+	# to include a "date_created" field along with the model.
+	work_experiences_names = [experience.position for experience in work_experiences]
+	most_recent_index = work_experiences_names.index('Software Engineer (eCommerce)')
+	most_recent = work_experiences[most_recent_index]
+	work_experiences.pop(most_recent_index)
+	work_experiences.insert(0, most_recent)
 
 	return render(
 		request, 

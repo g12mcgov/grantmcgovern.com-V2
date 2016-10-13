@@ -62,3 +62,7 @@ newrelic.init
 
 # Bower
 # components/bower_components
+
+# Settings
+settings.py
+grantmcgovern/settings.py
