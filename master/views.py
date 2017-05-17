@@ -35,8 +35,8 @@ def index(request):
 	# This is a terrible hacky fix to get the most recent work experience
 	# object to show up first, this is because I was silly and neglected
 	# to include a "date_created" field along with the model.
-	work_experiences_names = [experience.position for experience in work_experiences]
-	most_recent_index = work_experiences_names.index('Software Engineer (eCommerce)')
+	work_experiences_names = [experience.company for experience in work_experiences]
+	most_recent_index = work_experiences_names.index('Goldman Sachs')
 	most_recent = work_experiences[most_recent_index]
 	work_experiences.pop(most_recent_index)
 	work_experiences.insert(0, most_recent)
