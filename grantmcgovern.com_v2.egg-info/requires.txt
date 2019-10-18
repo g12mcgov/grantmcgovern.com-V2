@@ -34,5 +34,5 @@ pytz==2015.4
 requests==2.7.0
 six==1.9.0
 static3==0.6.1
-urllib3==1.10.4
+urllib3==1.24.2
 wsgiref==0.1.2
